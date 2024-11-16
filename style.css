@@ -227,9 +227,9 @@ body {
     color: #999;
   }
 
-  @media only screen and (min-width:420px) {
+  @media screen and (max-width:431px) {
     .offer-container {
       text-align: center;
-      width: 100% !important;
+      width: 85% !important;
     } 
   }
