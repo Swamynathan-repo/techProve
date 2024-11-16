@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOGO Offer</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="offer-container">
+    <div class="heading-container">
+      <div class="line"></div>
+      <span class="heading-text">YAY! It's BOGO</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="offer-card">
+      <!-- 1 Unit Option -->
+      <div onclick="updatePrice()">
+        <div class="unit-option" onclick="toggleAccordion('one-unit-details', 'one-unit')">
+          <div class="unit-dollar">
+            <div id="lables">
+              <input type="radio" name="unit" id="one-unit" value="1">
+              <label for="one-unit">1 Unit <span class="discount">10% Off</span></label>
+              <div class="standard">Standard Price</div>
+            </div>
+            <div>
+              <h6 class="price">$10.00 USD </h6><del class="font-size">$24.00 USD</del>
+            </div>
+          </div>
+          <div id="one-unit-details" class="accordion-details">
+            <div class="selectors">
+              <div>
+                <label for="size1" class="size1">Size</label>
+                <label for="color1">Color</label>
+              </div>
+              <div class="for-section">
+                <p class="number">#1</p>
+                <select id="size2">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select id="color2">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                </select>
+              </div>
+              <div>
+                <div class="for-section">
+                  <p class="number">#2</p>
+                  <select id="size2">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                  </select>
+                  <select id="color2">
+                    <option value="color">Colour</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Units Option -->
+      <div onclick="updatePrice()" class="popular-card" >
+        <div class="ribbon">MOST POPULAR</div>
+        <div class="unit-option" onclick="toggleAccordion('two-units-details', 'two-units')">
+          <div class="unit-dollar">
+            <div id="lables">
+              <input type="radio" name="unit" id="two-units" value="2" >
+              <label for="two-units">2 Unit <span class="discount">20% Off</span></label>
+            </div>
+            <div>
+              <h6 class="price">$18.00 USD </h6><del class="font-size">$24.00 USD</del>
+            </div>
+          </div>
+          <div id="two-units-details" class="accordion-details">
+            <legend>Most Popular</legend>
+            <div class="selectors">
+              <div>
+                <label for="size1" class="size1">Size</label>
+                <label for="color1">Color</label>
+              </div>
+              <div class="for-section">
+                <p class="number">#1</p>
+                <select id="size2">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select id="color2">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                </select>
+              </div>
+              <div>
+                <div class="for-section">
+                  <p class="number">#2</p>
+                  <select id="size2">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                  </select>
+                  <select id="color2">
+                    <option value="color">Colour</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Units Option -->
+      <div onclick="updatePrice()">
+        <div class="unit-option" onclick="toggleAccordion('three-units-details', 'three-units')">
+          <div class="unit-dollar">
+            <div id="lables">
+              <input type="radio" name="unit" id="three-units" value="3">
+              <label for="three-units">3 Unit <span class="discount">25% Off</span></label>
+            </div>
+            <div>
+              <h6 class="price">$24.00 USD </h6><del class="font-size">$24.00 USD</del>
+            </div>
+          </div>
+          <div id="three-units-details" class="accordion-details">
+            <div class="selectors">
+              <div>
+                <label for="size1" class="size1">Size</label>
+                <label for="color1">Color</label>
+              </div>
+              <div class="for-section">
+                <p class="number">#1</p>
+                <select id="size2">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+                <select id="color2">
+                  <option value="Black">Black</option>
+                  <option value="White">White</option>
+                </select>
+              </div>
+              <div>
+                <div class="for-section">
+                  <p class="number">#2</p>
+                  <select id="size2">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                  </select>
+                  <select id="color2">
+                    <option value="color">Colour</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Price -->
+      <div class="total-del">
+        <p class="total-price">Free Delivery</p>
+        <p>Total: <span id="total-price">$0.00 USD</span></p>
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="add-to-cart" onclick="addToCart()">+ Add to Cart</button>
+
+      <div class="pumper">
+        <p>@ Powerded by pumper</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
